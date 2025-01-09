@@ -10,6 +10,7 @@ import java.util.Locale
 
 class JsonTariffEngine(json: String, private val listener: Listener? = null) {
     private val listRuleSet: Map<String, RuleSet>? = JsonUtils.fromJson<Map<String, RuleSet>>(json)
+
     interface Listener {
         fun onLog(log: String)
     }
@@ -51,10 +52,16 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
         return listRuleSet?.get(key)
     }
 
-    fun calculateFee(entryTimestamp: Long, time: Int, timeUnit: TimeUnit, ruleName: String = "default"): CalculationResult? {
+    fun calculateFee(
+        entryTimestamp: Long,
+        time: Int,
+        timeUnit: TimeUnit,
+        ruleName: String = "default"
+    ): CalculationResult? {
         val exitTimestamp = entryTimestamp + timeUnit.milliseconds * time
         return calculateFee(entryTimestamp, exitTimestamp, ruleName)
     }
+
     fun calculateFee(entryTimestamp: Long, exitTimestamp: Long, ruleName: String = "default"): CalculationResult? {
         val pair = getKeyValueOrFirstOrNull(listRuleSet, ruleName) ?: return null
         return calculateFee(pair.first, entryTimestamp, exitTimestamp, pair.second)
@@ -99,11 +106,21 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                 listener?.onLog("weekday: $weekday")
                 val result = when (type) {
                     RuleType.FREE -> {
-                        rule.days?.contains(dateFormatter.format(currentTime)) == true || weekdayInFreePeriods(startDateTime, endDateTime, weekday, rule.periods)
+                        rule.days?.contains(dateFormatter.format(currentTime)) == true || weekdayInFreePeriods(
+                            startDateTime,
+                            endDateTime,
+                            weekday,
+                            rule.periods
+                        )
                     }
 
                     else -> {
-                        rule.days == null || (rule.days.contains(weekday) && TimeUtils.hasOverlap(startDateTime, endDateTime, rule.startTime ?: "00:00", rule.endTime ?: "23:59"))
+                        rule.days == null || (rule.days.contains(weekday) && TimeUtils.hasOverlap(
+                            startDateTime,
+                            endDateTime,
+                            rule.startTime ?: "00:00",
+                            rule.endTime ?: "23:59"
+                        ))
                     }
                 }
                 listener?.onLog("result: $result")
@@ -126,7 +143,8 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                 set(Calendar.MINUTE, freeEnd.minutes)
                             }.timeInMillis
 
-                            val hasOverlap = TimeUtils.hasOverlap(currentTime, periodEndTime, freeStartTime, freeEndTime)
+                            val hasOverlap =
+                                TimeUtils.hasOverlap(currentTime, periodEndTime, freeStartTime, freeEndTime)
                             var calculatedTime = 0
                             if (hasOverlap) {
                                 val startTime = maxOf(currentTime, freeStartTime)
@@ -166,6 +184,7 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                             break
                         }
                     }
+
                     RuleType.TIER, RuleType.FLAT -> {
                         val periodStartTime = TimeUtils.formatTime(currentTime, rule.startTime)
                         if (currentTime < periodStartTime) {
@@ -180,7 +199,11 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                 if (!rule.rateTiers.isNullOrEmpty()) {
                                     listener?.onLog("currentTime: ${TimeUtils.getTime(currentTime)}")
                                     listener?.onLog("periodEndTime: ${TimeUtils.getTime(periodEndTime)}")
-                                    val remainingMinutes = TimeUtils.calculateNumberUnitBetween(currentTime, periodEndTime, TimeUnit.MINUTE) - freeMinutes
+                                    val remainingMinutes = TimeUtils.calculateNumberUnitBetween(
+                                        currentTime,
+                                        periodEndTime,
+                                        TimeUnit.MINUTE
+                                    ) - freeMinutes
                                     var rateTier =
                                         rule.rateTiers.find { tier -> tier.duration >= remainingMinutes }
                                     if (rateTier == null) {
@@ -200,9 +223,14 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                     lastPeriodEndTime = periodEndTime
                                 }
                             }
+
                             RuleType.FLAT -> {
                                 val flatRate = rule.rate ?: 0
-                                val flatUnit = try { TimeUnit.valueOf(rule.unit!!.uppercase()) } catch (e: Exception) { TimeUnit.HOUR }
+                                val flatUnit = try {
+                                    TimeUnit.valueOf(rule.unit!!.uppercase())
+                                } catch (e: Exception) {
+                                    TimeUnit.HOUR
+                                }
                                 var endTimestamp = periodEndTime
                                 if (true != rule.dailySettlement) {
                                     calCurrentTime = false
@@ -211,7 +239,8 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                 listener?.onLog("currentTime: ${TimeUtils.getTime(currentTime)}")
                                 listener?.onLog("periodEndTime: ${TimeUtils.getTime(endTimestamp)}")
                                 val countUnit = rule.countUnit
-                                var calculatedTime = TimeUtils.calculateNumberUnitBetween(currentTime, endTimestamp, flatUnit, countUnit)
+                                var calculatedTime =
+                                    TimeUtils.calculateNumberUnitBetween(currentTime, endTimestamp, flatUnit, countUnit)
                                 listener?.onLog("calculatedTime: $calculatedTime")
                                 if (freeMinutes > 0) {
                                     val freeTime = TimeUtils.calculateNumberUnitBetween(freeMinutes * 60L, flatUnit)
@@ -235,7 +264,15 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                 calendar.add(field, calculatedTime)
 //                                val after = TimeUtils.getTime(calendar.timeInMillis)
                                 val flatEndTime = calendar.timeInMillis
-                                ruleCalculations.add(RuleCalculation(rule, currentTime, endTimestamp, calculatedTime, calculatedFee))
+                                ruleCalculations.add(
+                                    RuleCalculation(
+                                        rule,
+                                        currentTime,
+                                        endTimestamp,
+                                        calculatedTime,
+                                        calculatedFee
+                                    )
+                                )
                                 currentTime = flatEndTime
                                 if (true != rule.dailySettlement) {
                                     currentTime = endDateTime
@@ -243,6 +280,7 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                                 lastPeriodEndTime = endTimestamp
                                 listener?.onLog("lastPeriodEndTime: ${TimeUtils.getTime(lastPeriodEndTime)}")
                             }
+
                             else -> {}
                         }
                     }
@@ -273,7 +311,12 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
         )
     }
 
-    private fun weekdayInFreePeriods(startDateTime: Long, endDateTime: Long, day: String, periods: List<FreePeriod>?): Boolean {
+    private fun weekdayInFreePeriods(
+        startDateTime: Long,
+        endDateTime: Long,
+        day: String,
+        periods: List<FreePeriod>?
+    ): Boolean {
         if (day.isEmpty() || periods.isNullOrEmpty()) {
             return false
         }
@@ -283,7 +326,8 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
                     endDateTime,
                     freePeriod.startTime,
                     freePeriod.endTime
-                )) {
+                )
+            ) {
                 if (freePeriod.days.isNullOrEmpty() || freePeriod.days.contains(day)) {
                     return true
                 }

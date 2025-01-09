@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="JTELibrary:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JTELibrary_jar</output-path>
+    <root id="archive" name="JTELibrary.jar" />
+  </artifact>
+</component>

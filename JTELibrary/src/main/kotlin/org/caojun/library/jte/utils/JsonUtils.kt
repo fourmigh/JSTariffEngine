@@ -65,7 +65,7 @@ object JsonUtils {
     fun toJson(data: Any?): String {
         return try {
             gson.toJson(data)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             ""
         }
     }

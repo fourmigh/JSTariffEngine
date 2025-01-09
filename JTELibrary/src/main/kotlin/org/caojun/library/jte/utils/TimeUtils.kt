@@ -183,7 +183,9 @@ object TimeUtils {
     }
 
     fun isOneDay(c1: Calendar, c2: Calendar): Boolean {
-        return c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR) && c1.get(Calendar.MONTH) == c2.get(Calendar.MONTH) && c1.get(Calendar.DAY_OF_MONTH) == c2.get(Calendar.DAY_OF_MONTH)
+        return c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR) && c1.get(Calendar.MONTH) == c2.get(Calendar.MONTH) && c1.get(
+            Calendar.DAY_OF_MONTH
+        ) == c2.get(Calendar.DAY_OF_MONTH)
     }
 
     fun getDate(time: Long = System.currentTimeMillis()): Date {
@@ -271,18 +273,18 @@ object TimeUtils {
         return c.get(fieldCalendar)
     }
 
-    fun getTimeStamp(dateFormat: String, dateString: String): Long{
+    fun getTimeStamp(dateFormat: String, dateString: String): Long {
         val df = SimpleDateFormat(dateFormat)
         var date = Date()
         try {
             date = df.parse(dateString)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
         return date.time
     }
 
-    fun timeInRange(compareTime:String, startTime:String, endTime:String, dateFormat: String): Boolean{
+    fun timeInRange(compareTime: String, startTime: String, endTime: String, dateFormat: String): Boolean {
         val start = getTimeStamp(dateFormat, startTime)
         val end = getTimeStamp(dateFormat, endTime)
         val compare = getTimeStamp(dateFormat, compareTime)
@@ -312,12 +314,20 @@ object TimeUtils {
         }
         return betweenTime(times[0], times[1], time)
     }
+
     fun betweenTime(beginTime: String, endTime: String, time: Long = System.currentTimeMillis()): Boolean {
         val hhmmBegin = hhmm2intArray(beginTime) ?: return false
         val hhmmEnd = hhmm2intArray(endTime) ?: return false
         return betweenTime(hhmmBegin[0], hhmmBegin[1], hhmmEnd[0], hhmmEnd[1], time)
     }
-    fun betweenTime(beginHour: Int, beginMin: Int, endHour: Int, endMin: Int, time: Long = System.currentTimeMillis()): Boolean {
+
+    fun betweenTime(
+        beginHour: Int,
+        beginMin: Int,
+        endHour: Int,
+        endMin: Int,
+        time: Long = System.currentTimeMillis()
+    ): Boolean {
 
         if (beginHour == endHour && beginMin == endMin) {
             //开始和结束时间一样
@@ -354,20 +364,25 @@ object TimeUtils {
         }
     }
 
-    fun getEnTime(time: Long) : String{
+    fun getEnTime(time: Long): String {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.ENGLISH)
         format.timeZone = LocalTimeZone
         val date = Date(abs(time))
         return format.format(date)
     }
-    fun parseEnTime(time: String) : Long{
+
+    fun parseEnTime(time: String): Long {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.ENGLISH)
         format.timeZone = LocalTimeZone
         val datee = format.parse(time)
         return datee.time
     }
 
-    fun translateTime(time: String, patternIn: String = "yyyyMMddHHmmss", patternOut: String = "yyyy-MM-dd HH:mm:ss"): String {
+    fun translateTime(
+        time: String,
+        patternIn: String = "yyyyMMddHHmmss",
+        patternOut: String = "yyyy-MM-dd HH:mm:ss"
+    ): String {
         val longTime = parseTime(time, patternIn)
         return getTime(longTime, patternOut)
     }
@@ -380,10 +395,10 @@ object TimeUtils {
         return getTime(dateFormat, LocalTimeZone, time)
     }
 
-    fun showTimeFormat(time:Int) : String{
-        return if (time < 10){
+    fun showTimeFormat(time: Int): String {
+        return if (time < 10) {
             "0$time"
-        }else{
+        } else {
             "$time"
         }
     }
@@ -404,6 +419,7 @@ object TimeUtils {
         val c = getCalendar(year, month, day)
         return c.timeInMillis
     }
+
     fun getCalendar(year: Int, month: Int, day: Int): Calendar {
         val c = getCalendar()
         c.set(Calendar.YEAR, year)
@@ -416,7 +432,16 @@ object TimeUtils {
         val c = getCalendar(year, month, day, hour, minute, second)
         return c.timeInMillis
     }
-    fun getCalendar(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, millisecond: Int = 0): Calendar {
+
+    fun getCalendar(
+        year: Int,
+        month: Int,
+        day: Int,
+        hour: Int,
+        minute: Int,
+        second: Int,
+        millisecond: Int = 0
+    ): Calendar {
         val c = getCalendar(year, month, day)
         c.set(Calendar.HOUR_OF_DAY, hour)
         c.set(Calendar.MINUTE, minute)
@@ -464,7 +489,7 @@ object TimeUtils {
         return "GMT$t"
     }
 
-    fun getMonthLastDay(year: Int, month: Int) : Int{
+    fun getMonthLastDay(year: Int, month: Int): Int {
         val c = Calendar.getInstance()
         c.set(Calendar.YEAR, year)
         c.set(Calendar.MONTH, month - 1)
@@ -517,10 +542,11 @@ object TimeUtils {
         }
         var count = defTimeSecond / unitTime
         if (unit != TimeUnit.DAY && defTimeSecond % unitTime > 0) {
-            count ++
+            count++
         }
         return count.toInt()
     }
+
     fun calculateNumberUnitBetween(startTimestamp: Long, endTimestamp: Long, unit: TimeUnit, countUnit: Int = 1): Int {
         val defTime = (endTimestamp - startTimestamp) / 1000
         if (defTime <= 0) {
