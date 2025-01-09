@@ -1,4 +1,4 @@
-package org.caojun.library.jte.jsontariffengine
+package org.caojun.jte.jsontariffengine
 
 import javafx.application.Application
 import javafx.fxml.FXMLLoader

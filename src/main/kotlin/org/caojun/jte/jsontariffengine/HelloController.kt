@@ -1,4 +1,4 @@
-package org.caojun.library.jte.jsontariffengine
+package org.caojun.jte.jsontariffengine
 
 import javafx.fxml.FXML
 import javafx.scene.control.Label
