@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="Wellington" ValidFrom="2023-01-01T00:00:00Z">
+	<TariffDefs>
+		<CompositeTariff Name="W01" MaxCost="999.99" Category="1" ClosedAction="Stop" FreeAction="Stop">
+			<BaseTariff>
+				<ClosedTariff AuditCode="C0"/>
+			</BaseTariff>
+			<BaseDescriptions>
+				<TariffDescription Lang="en-NZ">Overnight - Free</TariffDescription>
+				<TariffDescription Lang="mi-NZ">Te po - Kore utu</TariffDescription>
+			</BaseDescriptions>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<ClosedTariff AuditCode="PH0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="OR">
+							<TariffRuleActiveDate Date="2023-10-23"/>
+							<TariffRuleActiveDate Date="2023-12-25"/>
+							<TariffRuleActiveDate Date="2023-12-26"/>
+							<TariffRuleActiveDate Date="2024-01-01"/>
+							<TariffRuleActiveDate Date="2024-01-02"/>
+							<TariffRuleActiveDate Date="2024-01-22"/>
+							<TariffRuleActiveDate Date="2024-02-06"/>
+							<TariffRuleActiveDate Date="2024-03-29"/>
+							<TariffRuleActiveDate Date="2024-04-01"/>
+							<TariffRuleActiveDate Date="2024-04-25"/>
+							<TariffRuleActiveDate Date="2024-06-03"/>
+							<TariffRuleActiveDate Date="2024-06-28"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Public Holiday - Free</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Hararei Tūmatanui - Kore utu</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="true">
+					<Tariff>
+						<FreeTariff AuditCode="F0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="06:00" EndTime="08:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Overnight - Free
+Mon - Fri 8am-5pm	$5/hr, 2 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Te po - Kore utu
+Mane - Paraire 8am-5pm $5/haora, 2 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="true">
+					<Tariff>
+						<FreeTariff AuditCode="F1"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekends/>
+							<TariffRuleStartEndTime StartTime="06:00" EndTime="08:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Overnight - Free
+Sat-Sun 8am-8pm	$3/hr, 3 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Te po - Kore utu
+Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WDD100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WDD150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WDD250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WDD300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WDD450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WDD500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WDD600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WDD750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WDD900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WDD1000"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="17:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Mon - Fri 8am-5pm	$5/hr, 2 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Mane - Paraire 8am-5pm $5/haora, 2 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:20:00" AuditCode="WE100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:30:00" AuditCode="WE150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:50:00" AuditCode="WE250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="01:00:00" AuditCode="WE300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="01:30:00" AuditCode="WE450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:40:00" AuditCode="WE500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="02:00:00" AuditCode="WE600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="02:30:00" AuditCode="WE750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="03:00:00" AuditCode="WE900"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekends/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Sat-Sun 8am-8pm	$3/hr, 3 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WDE100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WDE150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WDE250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WDE300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WDE450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WDE500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WDE600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WDE750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WDE900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WDE1000"/>
+							<BasicTariffPeriodFixed Cost="12.50" Interval="02:30:00" AuditCode="WDE1250"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="03:00:00" AuditCode="WDE1500"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="17:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Mon - Fri 5pm-8pm	$5/hr, 3 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Mane - Paraire 5pm-8pm $5/haora, 3 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+			</Tariffs>
+			<Descriptions>
+				<TariffDescription Lang="en-NZ">Mon-Fri 8am-5pm $5/hr, 2 hrs max
+Mon-Fri 5am-8pm $5/hr, 3 hrs max
+Sat-Sun 8am-8pm $3/hr, 3 hrs max
+Overnight &amp; Public Holidays - Free</TariffDescription>
+				<TariffDescription Lang="mi-NZ">Mane-Paraire 8am-5pm $5/haora, 2 haora te teitei
+Mane-Paraire 5am-8pm $5/haora, 3 haora te teitei
+Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei
+Te Po me nga Hararei - Kore utu</TariffDescription>
+			</Descriptions>
+		</CompositeTariff>
+		<CompositeTariff Name="W02" MaxCost="999.99" Category="2" ClosedAction="Stop" FreeAction="Stop">
+			<BaseTariff>
+				<ClosedTariff AuditCode="C0"/>
+			</BaseTariff>
+			<BaseDescriptions>
+				<TariffDescription Lang="en-NZ">Overnight - Free</TariffDescription>
+				<TariffDescription Lang="mi-NZ">Te po - Kore utu</TariffDescription>
+			</BaseDescriptions>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<ClosedTariff AuditCode="PH0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="OR">
+							<TariffRuleActiveDate Date="2023-10-23"/>
+							<TariffRuleActiveDate Date="2023-12-25"/>
+							<TariffRuleActiveDate Date="2023-12-26"/>
+							<TariffRuleActiveDate Date="2024-01-01"/>
+							<TariffRuleActiveDate Date="2024-01-02"/>
+							<TariffRuleActiveDate Date="2024-01-22"/>
+							<TariffRuleActiveDate Date="2024-02-06"/>
+							<TariffRuleActiveDate Date="2024-03-29"/>
+							<TariffRuleActiveDate Date="2024-04-01"/>
+							<TariffRuleActiveDate Date="2024-04-25"/>
+							<TariffRuleActiveDate Date="2024-06-03"/>
+							<TariffRuleActiveDate Date="2024-06-28"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Public Holiday - Free</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Hararei Tūmatanui - Kore utu</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<ClosedTariff AuditCode="CW0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="06:00" EndTime="09:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Overnight - Free
+Mon-Fri 7am-9am	CLEARWAY</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Te po - Kore utu
+Mane-Paraire 7am-9am CLEARWAY</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="true">
+					<Tariff>
+						<FreeTariff AuditCode="F0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekends/>
+							<TariffRuleStartEndTime StartTime="06:00" EndTime="08:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Overnight - Free
+Sat-Sun 8am-8pm	$3/hr, 3 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Te po - Kore utu
+Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:20:00" AuditCode="WE100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:30:00" AuditCode="WE150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:50:00" AuditCode="WE250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="01:00:00" AuditCode="WE300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="01:30:00" AuditCode="WE450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:40:00" AuditCode="WE500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="02:00:00" AuditCode="WE600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="02:30:00" AuditCode="WE750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="03:00:00" AuditCode="WE900"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekends/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="mi-NZ">Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei</TariffDescription>
+						<TariffDescription Lang="en-NZ">Sat-Sun 8am-8pm	$3/hr, 3 hrs max</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WDD100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WDD150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WDD250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WDD300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WDD450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WDD500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WDD600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WDD750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WDD900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WDD1000"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="09:00" EndTime="17:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="mi-NZ">Mane - Paraire 9am-5pm $5/haora, 2 haora te teitei</TariffDescription>
+						<TariffDescription Lang="en-NZ">Mon - Fri 9am-5pm	$5/hr, 2 hrs max</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+				<TariffItem Priority="5" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WDE100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WDE150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WDE250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WDE300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WDE450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WDE500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WDE600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WDE750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WDE900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WDE1000"/>
+							<BasicTariffPeriodFixed Cost="12.50" Interval="02:30:00" AuditCode="WDE1250"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="03:00:00" AuditCode="WDE1500"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="17:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-NZ">Mon - Fri 5pm-8pm	$5/hr, 3 hrs max</TariffDescription>
+						<TariffDescription Lang="mi-NZ">Mane - Paraire 5pm-8pm $5/haora, 3 haora te teitei</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+			</Tariffs>
+			<Descriptions>
+				<TariffDescription Lang="en-NZ">Mon-Fri 7am-9am - CLEARWAY
+Mon-Fri 9am-5pm $5/hr, 2 hrs max
+Mon-Fri 5am-8pm $5/hr, 3 hrs max
+Sat-Sun 8am-8pm $3/hr, 3 hrs max
+Overnight &amp; Public Holidays - Free</TariffDescription>
+				<TariffDescription Lang="mi-NZ">Mane-Paraire 7am-9am - CLEARWAY
+Mane-Paraire 9am-5pm $5/haora, 2 haora te teitei
+Mane-Paraire 5am-8pm $5/haora, 3 haora te teitei
+Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei
+Te Po me nga Hararei - Kore utu</TariffDescription>
+			</Descriptions>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

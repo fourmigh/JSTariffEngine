@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="PIE test tariff" ValidFrom="2022-06-01 08:00:00 +00:00">
+	<TariffDefs>
+		<CompositeTariff Name="W02" ClosedAction="Stop" FreeAction="Carry">
+			<!-- Basic tariff (when no other rules apply, e.g. overnight) is closed -->
+			<BaseTariff><ClosedTariff/></BaseTariff>
+			<Tariffs>
+				<TariffItem Priority="0">
+					<!-- £1.00 per minutes, rounded up to the next mintes -->
+					<Tariff><BasicTariff Cost="1.00" Interval="00:01:00" RoundUp="True" AuditCode="STD"/></Tariff>
+					<Rule><TariffRuleAlways/></Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

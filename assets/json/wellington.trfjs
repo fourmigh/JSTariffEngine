@@ -1,0 +1,84 @@
+{
+	"W01": {
+		"maxAmount" : 99999,
+		"rules" : [
+			{
+				"name": "weekday_tiered",
+				"type": "tier",
+				"rateTiers": [
+					{ "duration": 12, "rate": 100 },
+					{ "duration": 18, "rate": 150 },
+					{ "duration": 30, "rate": 250 },
+					{ "duration": 36, "rate": 300 },
+					{ "duration": 54, "rate": 450 },
+					{ "duration": 60, "rate": 500 },
+					{ "duration": 72, "rate": 600 },
+					{ "duration": 90, "rate": 750 },
+					{ "duration": 108, "rate": 900 },
+					{ "duration": 120, "rate": 1000 }
+				],
+				"startTime": "08:00",
+				"endTime": "17:00",
+				"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+			},
+			{
+				"name": "weekday_tiered",
+				"type": "tier",
+				"rateTiers": [
+					{ "duration": 12, "rate": 100 },
+					{ "duration": 18, "rate": 150 },
+					{ "duration": 30, "rate": 250 },
+					{ "duration": 36, "rate": 300 },
+					{ "duration": 54, "rate": 450 },
+					{ "duration": 60, "rate": 500 },
+					{ "duration": 72, "rate": 600 },
+					{ "duration": 90, "rate": 750 },
+					{ "duration": 108, "rate": 900 },
+					{ "duration": 120, "rate": 1000 },
+					{ "duration": 150, "rate": 1250 },
+					{ "duration": 180, "rate": 1500 }
+				],
+				"startTime": "17:00",
+				"endTime": "20:00",
+				"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+			},
+			{
+				"name": "weekend_tiered",
+				"type": "tier",
+				"rateTiers": [
+					{ "duration": 20, "rate": 100 },
+					{ "duration": 30, "rate": 150 },
+					{ "duration": 50, "rate": 250 },
+					{ "duration": 60, "rate": 300 },
+					{ "duration": 90, "rate": 450 },
+					{ "duration": 100, "rate": 500 },
+					{ "duration": 120, "rate": 600 },
+					{ "duration": 150, "rate": 750 },
+					{ "duration": 180, "rate": 900 }
+				],
+				"startTime": "08:00",
+				"endTime": "20:00",
+				"days": ["Saturday", "Sunday"]
+			}
+		]
+	},
+	"W02": {
+		"maxAmount" : 99999,
+		"rules" : [
+			{
+				"name": "weekday_tiered",
+				"type": "tier",
+				"rateTiers": [
+					{ "duration": 20, "rate": 100 },
+					{ "duration": 30, "rate": 150 },
+					{ "duration": 60, "rate": 300 },
+					{ "duration": 90, "rate": 450 },
+					{ "duration": 120, "rate": 600 }
+				],
+				"startTime": "08:00",
+				"endTime": "16:00",
+				"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+			}
+		]
+	}
+}

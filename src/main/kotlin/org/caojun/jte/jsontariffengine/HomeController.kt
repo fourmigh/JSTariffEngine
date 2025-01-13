@@ -10,6 +10,7 @@ import org.caojun.jte.jsontariffengine.utils.MenuUtils
 import org.caojun.jte.jsontariffengine.utils.RecentMenuUtils
 import org.caojun.library.jte.JsonTariffEngine
 import org.slf4j.LoggerFactory
+import java.io.File
 
 class HomeController {
 
@@ -30,6 +31,31 @@ class HomeController {
             fileChooser.title = "Open File"
             // 显示打开文件对话框
             val file = fileChooser.showOpenDialog(miOpenFile.parentPopup.ownerWindow)
+            openJTEFile(file)
+        }
+
+        miQuit.setOnAction {
+            Platform.exit()
+        }
+
+        val listRecentFile = RecentMenuUtils.load()
+        loadRecentFileMenu(listRecentFile)
+    }
+
+    private fun loadRecentFileMenu(list: Array<Pair<MenuItem, File>>) {
+        MenuUtils.clear(mOpenRecent)
+        for (pair in list) {
+            val menuItem = pair.first
+            MenuUtils.addRecentFile(mOpenRecent, menuItem)
+            val file = pair.second
+            menuItem.setOnAction {
+                openJTEFile(file)
+            }
+        }
+    }
+
+    private fun openJTEFile(file: File) {
+        if (file.exists()) {
             val json = FileUtils.readFileContent(file)
             println("[JsonTariffEngine] json: $json")
             jte = JsonTariffEngine(json, object : JsonTariffEngine.Listener {
@@ -40,22 +66,13 @@ class HomeController {
             })
             if (true == jte?.isEnabled()) {
                 val listRecentFile = RecentMenuUtils.add(file)
-                MenuUtils.clear(mOpenRecent)
-                for (pair in listRecentFile) {
-                    val menuItem = pair.first
-                    MenuUtils.addRecentFile(mOpenRecent, menuItem)
-                }
+                loadRecentFileMenu(listRecentFile)
+            } else {
+                jte = null
             }
-        }
-
-        miQuit.setOnAction {
-            Platform.exit()
-        }
-
-        val listRecentFile = RecentMenuUtils.load()
-        for (pair in listRecentFile) {
-            val menuItem = pair.first
-            MenuUtils.addRecentFile(mOpenRecent, menuItem)
+        } else {
+            val listRecentFile = RecentMenuUtils.clear()
+            loadRecentFileMenu(listRecentFile)
         }
     }
 }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TariffSet Description="Default Test Tariff" ValidFrom="2023-08-10T00:00:00Z">
+	<TariffDefs>
+		<CompositeTariff Name="DefaultTariff" Category="0" ClosedAction="Stop" FreeAction="BuyInto" MaxCost="45.00">
+			<BaseTariff>
+				<FreeTariff AuditCode="TC0"/>
+			</BaseTariff>
+			<BaseDescriptions>
+				<TariffDescription Lang="en-GB"></TariffDescription>
+			</BaseDescriptions>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<BasicTariff Interval="1:00:00" Cost="1.00" RoundUp="true" AuditCode="TC1"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleAlways/>
+					</Rule>
+					<Descriptions>
+						<TariffDescription Lang="en-GB">£1/hour, £45 max</TariffDescription>
+					</Descriptions>
+				</TariffItem>
+			</Tariffs>
+			<Descriptions>
+				<TariffDescription Lang="en-GB">£1/hour, £45 max</TariffDescription>
+			</Descriptions>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

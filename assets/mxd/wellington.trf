@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="WELLINGTON" ValidFrom="2023-03-01T00:00:00Z">
+	<TariffDefs>
+		<CompositeTariff Name="W01" MaxCost="999.99" Category="0" ClosedAction="Stop" FreeAction="BuyInto">
+			<BaseTariff>
+				<ClosedTariff AuditCode="TC0"/>
+			</BaseTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WD100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WD150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WD250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WD300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WD450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WD500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WD600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WD750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WD900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WD1000"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="17:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:20:00" AuditCode="WK100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:30:00" AuditCode="WK150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:50:00" AuditCode="WK250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="01:00:00" AuditCode="WK300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="01:30:00" AuditCode="WK450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:40:00" AuditCode="WK500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="02:00:00" AuditCode="WK600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="02:30:00" AuditCode="WK750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="03:00:00" AuditCode="WK900"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekends/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:12:00" AuditCode="WE100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:18:00" AuditCode="WE150"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="00:30:00" AuditCode="WE250"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="00:36:00" AuditCode="WE300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="00:54:00" AuditCode="WE450"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="WE500"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="01:12:00" AuditCode="WE600"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="01:30:00" AuditCode="WE750"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="01:48:00" AuditCode="WE900"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="02:00:00" AuditCode="WE1000"/>
+							<BasicTariffPeriodFixed Cost="12.50" Interval="02:30:00" AuditCode="WE1250"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="03:00:00" AuditCode="WE1500"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="17:00" EndTime="20:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+			<Description>
+				<TariffDescription Lang="en-GB">
+					<Text>Mon - Fri	8am - 5pm, $5/hr, 2 hrs max
+Mon - Fri	5pm - 8pm, $5/hr, 3 hrs max
+Sat - Sun		8am - 8pm, $3/hr, 3 hrs max
+All Days		8pm - 8am, Closed</Text>
+				</TariffDescription>
+				<TariffDescription Lang="fr-FR">
+					<Text>Lun - Ven	08:00 - 17:00, $5/hr, 2 h max
+Lun - Ven	17:00- 20:00 $5/hr, 3 h max
+Sam - Dim	08:00 - 20:00, $3/hr, 3 h max
+Tous les jours	20:00 - 08:00, Fermé</Text>
+				</TariffDescription>
+			</Description>
+		</CompositeTariff>
+		<CompositeTariff Name="W02" MaxCost="999.99" Category="0" ClosedAction="Stop" FreeAction="BuyInto">
+			<BaseTariff>
+				<ClosedTariff AuditCode="TC0"/>
+			</BaseTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="1.00" Interval="00:20:00" AuditCode="D100"/>
+							<BasicTariffPeriodFixed Cost="1.50" Interval="00:30:00" AuditCode="D150"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="01:00:00" AuditCode="D300"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="01:30:00" AuditCode="D450"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="02:00:00" AuditCode="D600"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="AND">
+							<TariffRuleActiveWeekdays/>
+							<TariffRuleStartEndTime StartTime="08:00" EndTime="16:00"/>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="false">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="02:00:00" AuditCode="F0"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="OR">
+							<TariffRuleCombiner Operation="AND">
+								<TariffRuleActiveWeekends/>
+								<TariffRuleStartEndTime StartTime="08:00" EndTime="20:00"/>
+							</TariffRuleCombiner>
+							<TariffRuleCombiner Operation="AND">
+								<TariffRuleActiveWeekdays/>
+								<TariffRuleStartEndTime StartTime="16:00" EndTime="20:00"/>
+							</TariffRuleCombiner>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+			<Description>
+				<TariffDescription Lang="en-GB">
+					<Text>Words</Text>
+				</TariffDescription>
+				<TariffDescription Lang="fr-FR">
+					<Text>Mots</Text>
+				</TariffDescription>
+			</Description>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

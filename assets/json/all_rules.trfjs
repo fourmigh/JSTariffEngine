@@ -1,0 +1,467 @@
+{
+    "W01": {
+        "maxAmount": 99999,
+        "rules": [
+            {
+                "name": "weekday_tiered_day",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Mon - Fri 8am-5pm $5hr, 2 hrs max"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Mane - Paraire 8am-5pm $5/haora, 2 haora te teitei"
+                    }
+                ],
+                "type": "tier",
+                "rateTiers": [
+                    {
+                        "duration": 12,
+                        "rate": 100
+                    },
+                    {
+                        "duration": 18,
+                        "rate": 150
+                    },
+                    {
+                        "duration": 30,
+                        "rate": 250
+                    },
+                    {
+                        "duration": 36,
+                        "rate": 300
+                    },
+                    {
+                        "duration": 54,
+                        "rate": 450
+                    },
+                    {
+                        "duration": 60,
+                        "rate": 500
+                    },
+                    {
+                        "duration": 72,
+                        "rate": 600
+                    },
+                    {
+                        "duration": 90,
+                        "rate": 750
+                    },
+                    {
+                        "duration": 108,
+                        "rate": 900
+                    },
+                    {
+                        "duration": 120,
+                        "rate": 1000
+                    }
+                ],
+                "startTime": "08:00",
+                "endTime": "17:00",
+                "days": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday"
+                ]
+            },
+            {
+                "name": "weekday_tiered_night",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Sat-Sun 8am-8pm $3/hr, 3 hrs max"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei"
+                    }
+                ],
+                "type": "tier",
+                "rateTiers": [
+                    {
+                        "duration": 12,
+                        "rate": 100
+                    },
+                    {
+                        "duration": 18,
+                        "rate": 150
+                    },
+                    {
+                        "duration": 30,
+                        "rate": 250
+                    },
+                    {
+                        "duration": 36,
+                        "rate": 300
+                    },
+                    {
+                        "duration": 54,
+                        "rate": 450
+                    },
+                    {
+                        "duration": 60,
+                        "rate": 500
+                    },
+                    {
+                        "duration": 72,
+                        "rate": 600
+                    },
+                    {
+                        "duration": 90,
+                        "rate": 750
+                    },
+                    {
+                        "duration": 108,
+                        "rate": 900
+                    },
+                    {
+                        "duration": 120,
+                        "rate": 1000
+                    },
+                    {
+                        "duration": 150,
+                        "rate": 1250
+                    },
+                    {
+                        "duration": 180,
+                        "rate": 1500
+                    }
+                ],
+                "startTime": "17:00",
+                "endTime": "20:00",
+                "days": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday"
+                ]
+            },
+            {
+                "name": "flat_rate",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Sat - Sun $1/hr, 24 hrs max"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Mane - Paraire $5/haora, 24 haora te teitei"
+                    }
+                ],
+                "type": "flat",
+                "rate": 100,
+                "unit": "hour",
+                "dailySettlement": true,
+                "dailyCap": 2400,
+                "days": [
+                    "Saturday",
+                    "Sunday"
+                ]
+            },
+            {
+                "name": "free_or_holiday",
+                "type": "free",
+                "days": [
+                    "2024-03-29",
+                    "2024-04-01",
+                    "2024-05-06",
+                    "2024-05-27",
+                    "2024-08-26",
+                    "2024-12-25",
+                    "2024-12-26",
+                    "2025-01-01",
+                    "2025-04-18",
+                    "2025-04-21",
+                    "2025-05-05",
+                    "2025-05-26",
+                    "2025-08-25",
+                    "2025-12-25",
+                    "2025-12-26",
+                    "2026-01-01",
+                    "2026-04-02",
+                    "2026-04-06",
+                    "2026-05-04",
+                    "2026-05-25",
+                    "2026-08-31",
+                    "2026-12-25",
+                    "2026-12-26",
+                    "2026-12-28",
+                    "2027-01-01",
+                    "2027-03-26",
+                    "2027-03-29",
+                    "2027-05-03",
+                    "2027-05-31",
+                    "2027-08-30",
+                    "2027-12-25",
+                    "2027-12-26",
+                    "2027-12-27",
+                    "2027-12-28",
+                    "2028-01-01",
+                    "2028-01-03",
+                    "2028-04-14",
+                    "2028-04-17",
+                    "2028-05-01",
+                    "2028-05-29",
+                    "2028-08-28",
+                    "2028-12-25",
+                    "2028-12-26",
+                    "2029-01-01",
+                    "2029-03-30",
+                    "2029-04-02",
+                    "2029-05-07",
+                    "2029-05-28",
+                    "2029-08-27",
+                    "2029-12-25",
+                    "2029-12-26",
+                    "2030-01-01",
+                    "2030-04-19",
+                    "2030-04-22",
+                    "2030-05-06",
+                    "2030-05-27",
+                    "2030-08-26",
+                    "2030-12-25",
+                    "2030-12-26"
+                ]
+            }
+        ]
+    },
+    "W02": {
+        "maxAmount": 99999,
+        "rules": [
+            {
+                "name": "weekday_tiered_day",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Mon - Fri 8am-5pm $5/hr, 2 hrs max"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Mane - Paraire 8am-5pm $5/haora, 2 haora te teitei"
+                    }
+                ],
+                "type": "tier",
+                "rateTiers": [
+                    {
+                        "duration": 12,
+                        "rate": 100
+                    },
+                    {
+                        "duration": 18,
+                        "rate": 150
+                    },
+                    {
+                        "duration": 30,
+                        "rate": 250
+                    },
+                    {
+                        "duration": 36,
+                        "rate": 300
+                    },
+                    {
+                        "duration": 54,
+                        "rate": 450
+                    },
+                    {
+                        "duration": 60,
+                        "rate": 500
+                    },
+                    {
+                        "duration": 72,
+                        "rate": 600
+                    },
+                    {
+                        "duration": 90,
+                        "rate": 750
+                    },
+                    {
+                        "duration": 108,
+                        "rate": 900
+                    },
+                    {
+                        "duration": 120,
+                        "rate": 1000
+                    }
+                ],
+                "startTime": "08:00",
+                "endTime": "17:00",
+                "days": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday"
+                ]
+            },
+            {
+                "name": "weekday_tiered_night",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Sat-Sun 8am-8pm $3/hr, 3 hrs max"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Hatarei-Ra 8am-8pm $3/haora, 3 haora te teitei"
+                    }
+                ],
+                "type": "tier",
+                "rateTiers": [
+                    {
+                        "duration": 12,
+                        "rate": 100
+                    },
+                    {
+                        "duration": 18,
+                        "rate": 150
+                    },
+                    {
+                        "duration": 30,
+                        "rate": 250
+                    },
+                    {
+                        "duration": 36,
+                        "rate": 300
+                    },
+                    {
+                        "duration": 54,
+                        "rate": 450
+                    },
+                    {
+                        "duration": 60,
+                        "rate": 500
+                    },
+                    {
+                        "duration": 72,
+                        "rate": 600
+                    },
+                    {
+                        "duration": 90,
+                        "rate": 750
+                    },
+                    {
+                        "duration": 108,
+                        "rate": 900
+                    },
+                    {
+                        "duration": 120,
+                        "rate": 1000
+                    },
+                    {
+                        "duration": 150,
+                        "rate": 1250
+                    },
+                    {
+                        "duration": 180,
+                        "rate": 1500
+                    }
+                ],
+                "startTime": "17:00",
+                "endTime": "20:00",
+                "days": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday"
+                ]
+            },
+            {
+                "name": "flat_rate",
+                "descriptions": [
+                    {
+                        "lang": "en-NZ",
+                        "content": "Sat - Sun $1/hr"
+                    },
+                    {
+                        "lang": "mi-NZ",
+                        "content": "Mane - Paraire $5/haora"
+                    }
+                ],
+                "type": "flat",
+                "rate": 100,
+                "unit": "hour",
+                "dailySettlement": false,
+                "days": [
+                    "Saturday",
+                    "Sunday"
+                ]
+            },
+            {
+                "name": "free_or_holiday",
+                "type": "free",
+                "days": [
+                    "2024-03-29",
+                    "2024-04-01",
+                    "2024-05-06",
+                    "2024-05-27",
+                    "2024-08-26",
+                    "2024-12-25",
+                    "2024-12-26",
+                    "2025-01-01",
+                    "2025-04-18",
+                    "2025-04-21",
+                    "2025-05-05",
+                    "2025-05-26",
+                    "2025-08-25",
+                    "2025-12-25",
+                    "2025-12-26",
+                    "2026-01-01",
+                    "2026-04-02",
+                    "2026-04-06",
+                    "2026-05-04",
+                    "2026-05-25",
+                    "2026-08-31",
+                    "2026-12-25",
+                    "2026-12-26",
+                    "2026-12-28",
+                    "2027-01-01",
+                    "2027-03-26",
+                    "2027-03-29",
+                    "2027-05-03",
+                    "2027-05-31",
+                    "2027-08-30",
+                    "2027-12-25",
+                    "2027-12-26",
+                    "2027-12-27",
+                    "2027-12-28",
+                    "2028-01-01",
+                    "2028-01-03",
+                    "2028-04-14",
+                    "2028-04-17",
+                    "2028-05-01",
+                    "2028-05-29",
+                    "2028-08-28",
+                    "2028-12-25",
+                    "2028-12-26",
+                    "2029-01-01",
+                    "2029-03-30",
+                    "2029-04-02",
+                    "2029-05-07",
+                    "2029-05-28",
+                    "2029-08-27",
+                    "2029-12-25",
+                    "2029-12-26",
+                    "2030-01-01",
+                    "2030-04-19",
+                    "2030-04-22",
+                    "2030-05-06",
+                    "2030-05-27",
+                    "2030-08-26",
+                    "2030-12-25",
+                    "2030-12-26"
+                ],
+                "periods": [
+                    {
+                        "days": [
+                            "Saturday",
+                            "Sunday"
+                        ],
+                        "startTime": "06:00",
+                        "endTime": "19:00"
+                    }
+                ]
+            }
+        ]
+    }
+}

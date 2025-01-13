@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="NOVOTEL, CARDIFF" CreationTime="2024-11-27T09:00:00Z" ValidFrom="2024-11-27T09:00:00Z">
+	<TariffDefs>
+		<CompositeTariff MaxCost="99.00" Category="0" ClosedAction="BuyInto" FreeAction="BuyInto" Name="STANDARD" AuditCode="">
+			<BaseTariff>
+				<ClosedTariff AuditCode=""/>
+			</BaseTariff>
+			<CapTariff>
+				<TariffFixedPeriods Repeatable="false" AuditCode="TC3">
+					<BasicTariffPeriodFixed Cost="24.00" Interval="1.00:00:00" AuditCode="NOV01Z"/>
+					<BasicTariffPeriodFixed Cost="25.00" Interval="1.01:00:00" AuditCode="NOV01AA"/>
+					<BasicTariffPeriodFixed Cost="26.00" Interval="1.02:00:00" AuditCode="NOV01AB"/>
+					<BasicTariffPeriodFixed Cost="27.00" Interval="1.03:00:00" AuditCode="NOV01AC"/>
+					<BasicTariffPeriodFixed Cost="28.00" Interval="1.04:00:00" AuditCode="NOV01AD"/>
+					<BasicTariffPeriodFixed Cost="29.00" Interval="1.05:00:00" AuditCode="NOV01AE"/>
+					<BasicTariffPeriodFixed Cost="30.00" Interval="1.06:00:00" AuditCode="NOV01AF"/>
+					<BasicTariffPeriodFixed Cost="31.00" Interval="1.07:00:00" AuditCode="NOV01AG"/>
+					<BasicTariffPeriodFixed Cost="32.00" Interval="1.08:00:00" AuditCode="NOV01AH"/>
+					<BasicTariffPeriodFixed Cost="33.00" Interval="1.09:00:00" AuditCode="NOV01AI"/>
+					<BasicTariffPeriodFixed Cost="34.00" Interval="1.10:00:00" AuditCode="NOV01AJ"/>
+					<BasicTariffPeriodFixed Cost="35.00" Interval="1.11:00:00" AuditCode="NOV01AK"/>
+					<BasicTariffPeriodFixed Cost="36.00" Interval="1.12:00:00" AuditCode="NOV01AL"/>
+					<BasicTariffPeriodFixed Cost="37.00" Interval="1.13:00:00" AuditCode="NOV01AM"/>
+					<BasicTariffPeriodFixed Cost="38.00" Interval="1.14:00:00" AuditCode="NOV01AN"/>
+					<BasicTariffPeriodFixed Cost="39.00" Interval="1.15:00:00" AuditCode="NOV01AO"/>
+					<BasicTariffPeriodFixed Cost="40.00" Interval="1.16:00:00" AuditCode="NOV01AP"/>
+					<BasicTariffPeriodFixed Cost="41.00" Interval="1.17:00:00" AuditCode="NOV01AQ"/>
+					<BasicTariffPeriodFixed Cost="42.00" Interval="1.18:00:00" AuditCode="NOV01AR"/>
+					<BasicTariffPeriodFixed Cost="43.00" Interval="1.19:00:00" AuditCode="NOV01AS"/>
+					<BasicTariffPeriodFixed Cost="44.00" Interval="1.20:00:00" AuditCode="NOV01AT"/>
+					<BasicTariffPeriodFixed Cost="45.00" Interval="1.21:00:00" AuditCode="NOV01AU"/>
+					<BasicTariffPeriodFixed Cost="46.00" Interval="1.22:00:00" AuditCode="NOV01AV"/>
+					<BasicTariffPeriodFixed Cost="47.00" Interval="1.23:00:00" AuditCode="NOV01AW"/>
+					<BasicTariffPeriodFixed Cost="48.00" Interval="2.00:00:00" AuditCode="NOV01AX"/>
+					<BasicTariffPeriodFixed Cost="72.00" Interval="3.00:00:00" AuditCode="NOV01AY"/>
+					<BasicTariffPeriodFixed Cost="96.00" Interval="4.00:00:00" AuditCode="NOV01AZ"/>
+					<BasicTariffPeriodFixed Cost="120.00" Interval="5.00:00:00" AuditCode="NOV01BA"/>
+					<BasicTariffPeriodFixed Cost="144.00" Interval="6.00:00:00" AuditCode="NOV01BB"/>
+					<BasicTariffPeriodFixed Cost="168.00" Interval="7.00:00:00" AuditCode="NOV01BC"/>
+					<BasicTariffPeriodFixed Cost="192.00" Interval="8.00:00:00" AuditCode="NOV01BD"/>
+					<BasicTariffPeriodFixed Cost="216.00" Interval="9.00:00:00" AuditCode="NOV01BE"/>
+					<BasicTariffPeriodFixed Cost="240.00" Interval="10.00:00:00" AuditCode="NOV01BF"/>
+					<BasicTariffPeriodFixed Cost="264.00" Interval="11.00:00:00" AuditCode="NOV01BG"/>
+					<BasicTariffPeriodFixed Cost="288.00" Interval="12.00:00:00" AuditCode="NOV01BH"/>
+					<BasicTariffPeriodFixed Cost="312.00" Interval="13.00:00:00" AuditCode="NOV01BI"/>
+					<BasicTariffPeriodFixed Cost="336.00" Interval="14.00:00:00" AuditCode="NOV01BJ"/>
+					<BasicTariffPeriodFixed Cost="360.00" Interval="15.00:00:00" AuditCode="NOV01BK"/>
+					<BasicTariffPeriodFixed Cost="384.00" Interval="16.00:00:00" AuditCode="NOV01BL"/>
+					<BasicTariffPeriodFixed Cost="408.00" Interval="17.00:00:00" AuditCode="NOV01BM"/>
+					<BasicTariffPeriodFixed Cost="432.00" Interval="18.00:00:00" AuditCode="NOV01BN"/>
+					<BasicTariffPeriodFixed Cost="456.00" Interval="19.00:00:00" AuditCode="NOV01BO"/>
+					<BasicTariffPeriodFixed Cost="480.00" Interval="20.00:00:00" AuditCode="NOV01BP"/>
+					<BasicTariffPeriodFixed Cost="504.00" Interval="21.00:00:00" AuditCode="NOV01BQ"/>
+					<BasicTariffPeriodFixed Cost="528.00" Interval="22.00:00:00" AuditCode="NOV01BR"/>
+					<BasicTariffPeriodFixed Cost="552.00" Interval="23.00:00:00" AuditCode="NOV01BS"/>
+					<BasicTariffPeriodFixed Cost="576.00" Interval="24.00:00:00" AuditCode="NOV01BT"/>
+					<BasicTariffPeriodFixed Cost="600.00" Interval="25.00:00:00" AuditCode="NOV01BU"/>
+					<BasicTariffPeriodFixed Cost="624.00" Interval="26.00:00:00" AuditCode="NOV01BV"/>
+					<BasicTariffPeriodFixed Cost="648.00" Interval="27.00:00:00" AuditCode="NOV01BW"/>
+					<BasicTariffPeriodFixed Cost="672.00" Interval="28.00:00:00" AuditCode="NOV01BX"/>
+					<BasicTariffPeriodFixed Cost="696.00" Interval="29.00:00:00" AuditCode="NOV01BY"/>
+					<BasicTariffPeriodFixed Cost="720.00" Interval="30.00:00:00" AuditCode="NOV01BZ"/>
+				</TariffFixedPeriods>
+			</CapTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC1">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="00:15:00" AuditCode="NOV01A"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="01:00:00" AuditCode="NOV01B"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="02:00:00" AuditCode="NOV01C"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="03:00:00" AuditCode="NOV01D"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="04:00:00" AuditCode="NOV01E"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="05:00:00" AuditCode="NOV01F"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="06:00:00" AuditCode="NOV01G"/>
+							<BasicTariffPeriodFixed Cost="17.00" Interval="07:00:00" AuditCode="NOV01H"/>
+							<BasicTariffPeriodFixed Cost="19.00" Interval="08:00:00" AuditCode="NOV01I"/>
+							<BasicTariffPeriodFixed Cost="21.00" Interval="09:00:00" AuditCode="NOV01J"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="09:00" EndTime="18:00"/>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC2">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="00:15:00" AuditCode="NOV01A"/>
+							<BasicTariffPeriodFixed Cost="1.00" Interval="01:00:00" AuditCode="NOV01K"/>
+							<BasicTariffPeriodFixed Cost="2.00" Interval="02:00:00" AuditCode="NOV01L"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="03:00:00" AuditCode="NOV01M"/>
+							<BasicTariffPeriodFixed Cost="4.00" Interval="04:00:00" AuditCode="NOV01N"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="05:00:00" AuditCode="NOV01O"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="06:00:00" AuditCode="NOV01P"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="07:00:00" AuditCode="NOV01Q"/>
+							<BasicTariffPeriodFixed Cost="8.00" Interval="08:00:00" AuditCode="NOV01R"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="09:00:00" AuditCode="NOV01S"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="10:00:00" AuditCode="NOV01T"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="11:00:00" AuditCode="NOV01U"/>
+							<BasicTariffPeriodFixed Cost="12.00" Interval="12:00:00" AuditCode="NOV01V"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="13:00:00" AuditCode="NOV01W"/>
+							<BasicTariffPeriodFixed Cost="14.00" Interval="14:00:00" AuditCode="NOV01X"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="15:00:00" AuditCode="NOV01Y"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="18:00" EndTime="09:00"/>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+		<CompositeTariff MaxCost="99.00" Category="1" ClosedAction="BuyInto" FreeAction="BuyInto" Name="CONFERENCES" AuditCode="">
+			<BaseTariff>
+				<ClosedTariff AuditCode=""/>
+			</BaseTariff>
+			<CapTariff>
+				<TariffFixedPeriods Repeatable="false" AuditCode="TC3">
+					<BasicTariffPeriodFixed Cost="12.00" Interval="1.00:00:00" AuditCode="NOV01CZ"/>
+					<BasicTariffPeriodFixed Cost="25.00" Interval="1.01:00:00" AuditCode="NOV01DA"/>
+					<BasicTariffPeriodFixed Cost="26.00" Interval="1.02:00:00" AuditCode="NOV01DB"/>
+					<BasicTariffPeriodFixed Cost="27.00" Interval="1.03:00:00" AuditCode="NOV01DC"/>
+					<BasicTariffPeriodFixed Cost="28.00" Interval="1.04:00:00" AuditCode="NOV01DD"/>
+					<BasicTariffPeriodFixed Cost="29.00" Interval="1.05:00:00" AuditCode="NOV01DE"/>
+					<BasicTariffPeriodFixed Cost="30.00" Interval="1.06:00:00" AuditCode="NOV01DF"/>
+					<BasicTariffPeriodFixed Cost="31.00" Interval="1.07:00:00" AuditCode="NOV01DG"/>
+					<BasicTariffPeriodFixed Cost="32.00" Interval="1.08:00:00" AuditCode="NOV01DH"/>
+					<BasicTariffPeriodFixed Cost="33.00" Interval="1.09:00:00" AuditCode="NOV01DI"/>
+					<BasicTariffPeriodFixed Cost="34.00" Interval="1.10:00:00" AuditCode="NOV01DJ"/>
+					<BasicTariffPeriodFixed Cost="35.00" Interval="1.11:00:00" AuditCode="NOV01DK"/>
+					<BasicTariffPeriodFixed Cost="36.00" Interval="1.12:00:00" AuditCode="NOV01DL"/>
+					<BasicTariffPeriodFixed Cost="37.00" Interval="1.13:00:00" AuditCode="NOV01DM"/>
+					<BasicTariffPeriodFixed Cost="38.00" Interval="1.14:00:00" AuditCode="NOV01DN"/>
+					<BasicTariffPeriodFixed Cost="39.00" Interval="1.15:00:00" AuditCode="NOV01DO"/>
+					<BasicTariffPeriodFixed Cost="40.00" Interval="1.16:00:00" AuditCode="NOV01DP"/>
+					<BasicTariffPeriodFixed Cost="41.00" Interval="1.17:00:00" AuditCode="NOV01DQ"/>
+					<BasicTariffPeriodFixed Cost="42.00" Interval="1.18:00:00" AuditCode="NOV01DR"/>
+					<BasicTariffPeriodFixed Cost="43.00" Interval="1.19:00:00" AuditCode="NOV01DS"/>
+					<BasicTariffPeriodFixed Cost="44.00" Interval="1.20:00:00" AuditCode="NOV01DT"/>
+					<BasicTariffPeriodFixed Cost="45.00" Interval="1.21:00:00" AuditCode="NOV01DU"/>
+					<BasicTariffPeriodFixed Cost="46.00" Interval="1.22:00:00" AuditCode="NOV01DV"/>
+					<BasicTariffPeriodFixed Cost="47.00" Interval="1.23:00:00" AuditCode="NOV01DW"/>
+					<BasicTariffPeriodFixed Cost="48.00" Interval="2.00:00:00" AuditCode="NOV01DX"/>
+					<BasicTariffPeriodFixed Cost="72.00" Interval="3.00:00:00" AuditCode="NOV01DY"/>
+					<BasicTariffPeriodFixed Cost="96.00" Interval="4.00:00:00" AuditCode="NOV01DZ"/>
+					<BasicTariffPeriodFixed Cost="120.00" Interval="5.00:00:00" AuditCode="NOV01EA"/>
+					<BasicTariffPeriodFixed Cost="144.00" Interval="6.00:00:00" AuditCode="NOV01EB"/>
+					<BasicTariffPeriodFixed Cost="168.00" Interval="7.00:00:00" AuditCode="NOV01EC"/>
+					<BasicTariffPeriodFixed Cost="192.00" Interval="8.00:00:00" AuditCode="NOV01ED"/>
+					<BasicTariffPeriodFixed Cost="216.00" Interval="9.00:00:00" AuditCode="NOV01EE"/>
+					<BasicTariffPeriodFixed Cost="240.00" Interval="10.00:00:00" AuditCode="NOV01EF"/>
+					<BasicTariffPeriodFixed Cost="264.00" Interval="11.00:00:00" AuditCode="NOV01EG"/>
+					<BasicTariffPeriodFixed Cost="288.00" Interval="12.00:00:00" AuditCode="NOV01EH"/>
+					<BasicTariffPeriodFixed Cost="312.00" Interval="13.00:00:00" AuditCode="NOV01EI"/>
+					<BasicTariffPeriodFixed Cost="336.00" Interval="14.00:00:00" AuditCode="NOV01EJ"/>
+					<BasicTariffPeriodFixed Cost="360.00" Interval="15.00:00:00" AuditCode="NOV01EK"/>
+					<BasicTariffPeriodFixed Cost="384.00" Interval="16.00:00:00" AuditCode="NOV01EL"/>
+					<BasicTariffPeriodFixed Cost="408.00" Interval="17.00:00:00" AuditCode="NOV01EM"/>
+					<BasicTariffPeriodFixed Cost="432.00" Interval="18.00:00:00" AuditCode="NOV01EN"/>
+					<BasicTariffPeriodFixed Cost="456.00" Interval="19.00:00:00" AuditCode="NOV01EO"/>
+					<BasicTariffPeriodFixed Cost="480.00" Interval="20.00:00:00" AuditCode="NOV01EP"/>
+					<BasicTariffPeriodFixed Cost="504.00" Interval="21.00:00:00" AuditCode="NOV01EQ"/>
+					<BasicTariffPeriodFixed Cost="528.00" Interval="22.00:00:00" AuditCode="NOV01ER"/>
+					<BasicTariffPeriodFixed Cost="552.00" Interval="23.00:00:00" AuditCode="NOV01ES"/>
+					<BasicTariffPeriodFixed Cost="576.00" Interval="24.00:00:00" AuditCode="NOV01ET"/>
+					<BasicTariffPeriodFixed Cost="600.00" Interval="25.00:00:00" AuditCode="NOV01EU"/>
+					<BasicTariffPeriodFixed Cost="624.00" Interval="26.00:00:00" AuditCode="NOV01EV"/>
+					<BasicTariffPeriodFixed Cost="648.00" Interval="27.00:00:00" AuditCode="NOV01EW"/>
+					<BasicTariffPeriodFixed Cost="672.00" Interval="28.00:00:00" AuditCode="NOV01EX"/>
+					<BasicTariffPeriodFixed Cost="696.00" Interval="29.00:00:00" AuditCode="NOV01EY"/>
+					<BasicTariffPeriodFixed Cost="720.00" Interval="30.00:00:00" AuditCode="NOV01EZ"/>
+				</TariffFixedPeriods>
+			</CapTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC1">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="00:15:00" AuditCode="NOV01CA"/>
+							<BasicTariffPeriodFixed Cost="2.50" Interval="01:00:00" AuditCode="NOV01CB"/>
+							<BasicTariffPeriodFixed Cost="3.50" Interval="02:00:00" AuditCode="NOV01CC"/>
+							<BasicTariffPeriodFixed Cost="4.50" Interval="03:00:00" AuditCode="NOV01CD"/>
+							<BasicTariffPeriodFixed Cost="5.50" Interval="04:00:00" AuditCode="NOV01CE"/>
+							<BasicTariffPeriodFixed Cost="6.50" Interval="05:00:00" AuditCode="NOV01CF"/>
+							<BasicTariffPeriodFixed Cost="7.50" Interval="06:00:00" AuditCode="NOV01CG"/>
+							<BasicTariffPeriodFixed Cost="8.50" Interval="07:00:00" AuditCode="NOV01CH"/>
+							<BasicTariffPeriodFixed Cost="9.50" Interval="08:00:00" AuditCode="NOV01CI"/>
+							<BasicTariffPeriodFixed Cost="10.50" Interval="09:00:00" AuditCode="NOV01CJ"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="10:00:00" AuditCode="NOV01CK"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="08:00" EndTime="18:00"/>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC2">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="00:15:00" AuditCode="NOV01A"/>
+							<BasicTariffPeriodFixed Cost="1.00" Interval="01:00:00" AuditCode="NOV01L"/>
+							<BasicTariffPeriodFixed Cost="2.00" Interval="02:00:00" AuditCode="NOV01M"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="03:00:00" AuditCode="NOV01N"/>
+							<BasicTariffPeriodFixed Cost="4.00" Interval="04:00:00" AuditCode="NOV01O"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="05:00:00" AuditCode="NOV01P"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="06:00:00" AuditCode="NOV01Q"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="07:00:00" AuditCode="NOV01R"/>
+							<BasicTariffPeriodFixed Cost="8.00" Interval="08:00:00" AuditCode="NOV01S"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="09:00:00" AuditCode="NOV01T"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="10:00:00" AuditCode="NOV01U"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="11:00:00" AuditCode="NOV01V"/>
+							<BasicTariffPeriodFixed Cost="12.00" Interval="12:00:00" AuditCode="NOV01W"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="13:00:00" AuditCode="NOV01X"/>
+							<BasicTariffPeriodFixed Cost="14.00" Interval="14:00:00" AuditCode="NOV01Y"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="18:00" EndTime="08:00"/>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+		<CompositeTariff MaxCost="99.00" Category="2" ClosedAction="BuyInto" FreeAction="BuyInto" Name="LEISURE USERS" AuditCode="">
+			<BaseTariff>
+				<ClosedTariff AuditCode=""/>
+			</BaseTariff>
+			<CapTariff>
+				<TariffFixedPeriods Repeatable="false" AuditCode="TC3">
+					<BasicTariffPeriodFixed Cost="6.00" Interval="1.00:00:00" AuditCode="NOV01FZ"/>
+					<BasicTariffPeriodFixed Cost="25.00" Interval="1.01:00:00" AuditCode="NOV01GA"/>
+					<BasicTariffPeriodFixed Cost="26.00" Interval="1.02:00:00" AuditCode="NOV01GB"/>
+					<BasicTariffPeriodFixed Cost="27.00" Interval="1.03:00:00" AuditCode="NOV01GC"/>
+					<BasicTariffPeriodFixed Cost="28.00" Interval="1.04:00:00" AuditCode="NOV01GD"/>
+					<BasicTariffPeriodFixed Cost="29.00" Interval="1.05:00:00" AuditCode="NOV01GE"/>
+					<BasicTariffPeriodFixed Cost="30.00" Interval="1.06:00:00" AuditCode="NOV01GF"/>
+					<BasicTariffPeriodFixed Cost="31.00" Interval="1.07:00:00" AuditCode="NOV01GG"/>
+					<BasicTariffPeriodFixed Cost="32.00" Interval="1.08:00:00" AuditCode="NOV01GH"/>
+					<BasicTariffPeriodFixed Cost="33.00" Interval="1.09:00:00" AuditCode="NOV01GI"/>
+					<BasicTariffPeriodFixed Cost="34.00" Interval="1.10:00:00" AuditCode="NOV01GJ"/>
+					<BasicTariffPeriodFixed Cost="35.00" Interval="1.11:00:00" AuditCode="NOV01GK"/>
+					<BasicTariffPeriodFixed Cost="36.00" Interval="1.12:00:00" AuditCode="NOV01GL"/>
+					<BasicTariffPeriodFixed Cost="37.00" Interval="1.13:00:00" AuditCode="NOV01GM"/>
+					<BasicTariffPeriodFixed Cost="38.00" Interval="1.14:00:00" AuditCode="NOV01GN"/>
+					<BasicTariffPeriodFixed Cost="39.00" Interval="1.15:00:00" AuditCode="NOV01GO"/>
+					<BasicTariffPeriodFixed Cost="40.00" Interval="1.16:00:00" AuditCode="NOV01GP"/>
+					<BasicTariffPeriodFixed Cost="41.00" Interval="1.17:00:00" AuditCode="NOV01GQ"/>
+					<BasicTariffPeriodFixed Cost="42.00" Interval="1.18:00:00" AuditCode="NOV01GR"/>
+					<BasicTariffPeriodFixed Cost="43.00" Interval="1.19:00:00" AuditCode="NOV01GS"/>
+					<BasicTariffPeriodFixed Cost="44.00" Interval="1.20:00:00" AuditCode="NOV01GT"/>
+					<BasicTariffPeriodFixed Cost="45.00" Interval="1.21:00:00" AuditCode="NOV01GU"/>
+					<BasicTariffPeriodFixed Cost="46.00" Interval="1.22:00:00" AuditCode="NOV01GV"/>
+					<BasicTariffPeriodFixed Cost="47.00" Interval="1.23:00:00" AuditCode="NOV01GW"/>
+					<BasicTariffPeriodFixed Cost="48.00" Interval="2.00:00:00" AuditCode="NOV01GX"/>
+					<BasicTariffPeriodFixed Cost="72.00" Interval="3.00:00:00" AuditCode="NOV01GY"/>
+					<BasicTariffPeriodFixed Cost="96.00" Interval="4.00:00:00" AuditCode="NOV01GZ"/>
+					<BasicTariffPeriodFixed Cost="120.00" Interval="5.00:00:00" AuditCode="NOV01HA"/>
+					<BasicTariffPeriodFixed Cost="144.00" Interval="6.00:00:00" AuditCode="NOV01HB"/>
+					<BasicTariffPeriodFixed Cost="168.00" Interval="7.00:00:00" AuditCode="NOV01HC"/>
+					<BasicTariffPeriodFixed Cost="192.00" Interval="8.00:00:00" AuditCode="NOV01HD"/>
+					<BasicTariffPeriodFixed Cost="216.00" Interval="9.00:00:00" AuditCode="NOV01HE"/>
+					<BasicTariffPeriodFixed Cost="240.00" Interval="10.00:00:00" AuditCode="NOV01HF"/>
+					<BasicTariffPeriodFixed Cost="264.00" Interval="11.00:00:00" AuditCode="NOV01HG"/>
+					<BasicTariffPeriodFixed Cost="288.00" Interval="12.00:00:00" AuditCode="NOV01HH"/>
+					<BasicTariffPeriodFixed Cost="312.00" Interval="13.00:00:00" AuditCode="NOV01HI"/>
+					<BasicTariffPeriodFixed Cost="336.00" Interval="14.00:00:00" AuditCode="NOV01HJ"/>
+					<BasicTariffPeriodFixed Cost="360.00" Interval="15.00:00:00" AuditCode="NOV01HK"/>
+					<BasicTariffPeriodFixed Cost="384.00" Interval="16.00:00:00" AuditCode="NOV01HL"/>
+					<BasicTariffPeriodFixed Cost="408.00" Interval="17.00:00:00" AuditCode="NOV01HM"/>
+					<BasicTariffPeriodFixed Cost="432.00" Interval="18.00:00:00" AuditCode="NOV01HN"/>
+					<BasicTariffPeriodFixed Cost="456.00" Interval="19.00:00:00" AuditCode="NOV01HO"/>
+					<BasicTariffPeriodFixed Cost="480.00" Interval="20.00:00:00" AuditCode="NOV01HP"/>
+					<BasicTariffPeriodFixed Cost="504.00" Interval="21.00:00:00" AuditCode="NOV01HQ"/>
+					<BasicTariffPeriodFixed Cost="528.00" Interval="22.00:00:00" AuditCode="NOV01HR"/>
+					<BasicTariffPeriodFixed Cost="552.00" Interval="23.00:00:00" AuditCode="NOV01HS"/>
+					<BasicTariffPeriodFixed Cost="576.00" Interval="24.00:00:00" AuditCode="NOV01HT"/>
+					<BasicTariffPeriodFixed Cost="600.00" Interval="25.00:00:00" AuditCode="NOV01HU"/>
+					<BasicTariffPeriodFixed Cost="624.00" Interval="26.00:00:00" AuditCode="NOV01HV"/>
+					<BasicTariffPeriodFixed Cost="648.00" Interval="27.00:00:00" AuditCode="NOV01HW"/>
+					<BasicTariffPeriodFixed Cost="672.00" Interval="28.00:00:00" AuditCode="NOV01HX"/>
+					<BasicTariffPeriodFixed Cost="696.00" Interval="29.00:00:00" AuditCode="NOV01HY"/>
+					<BasicTariffPeriodFixed Cost="720.00" Interval="30.00:00:00" AuditCode="NOV01HZ"/>
+				</TariffFixedPeriods>
+			</CapTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC1">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="02:00:00" AuditCode="NOV01FA"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="03:00:00" AuditCode="NOV01FB"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="04:00:00" AuditCode="NOV01FC"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="05:00:00" AuditCode="NOV01FD"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="06:00:00" AuditCode="NOV01FE"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="07:00:00" AuditCode="NOV01FF"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="08:00:00" AuditCode="NOV01FG"/>
+							<BasicTariffPeriodFixed Cost="17.00" Interval="09:00:00" AuditCode="NOV01FH"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="09:00" EndTime="18:00"/>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC2">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="02:00:00" AuditCode="NOV01FA"/>
+							<BasicTariffPeriodFixed Cost="1.00" Interval="03:00:00" AuditCode="NOV01FK"/>
+							<BasicTariffPeriodFixed Cost="2.00" Interval="04:00:00" AuditCode="NOV01FL"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="05:00:00" AuditCode="NOV01FM"/>
+							<BasicTariffPeriodFixed Cost="4.00" Interval="06:00:00" AuditCode="NOV01FN"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="07:00:00" AuditCode="NOV01FO"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="08:00:00" AuditCode="NOV01FP"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="09:00:00" AuditCode="NOV01FQ"/>
+							<BasicTariffPeriodFixed Cost="8.00" Interval="10:00:00" AuditCode="NOV01FR"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="11:00:00" AuditCode="NOV01FS"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="12:00:00" AuditCode="NOV01FT"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="13:00:00" AuditCode="NOV01FU"/>
+							<BasicTariffPeriodFixed Cost="12.00" Interval="14:00:00" AuditCode="NOV01FV"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="15:00:00" AuditCode="NOV01FW"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="18:00" EndTime="09:00"/>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+		<CompositeTariff MaxCost="99.00" Category="3" ClosedAction="BuyInto" FreeAction="BuyInto" Name="RESTAURANT USERS" AuditCode="">
+			<BaseTariff>
+				<ClosedTariff AuditCode=""/>
+			</BaseTariff>
+			<CapTariff>
+				<TariffFixedPeriods Repeatable="false" AuditCode="TC3">
+					<BasicTariffPeriodFixed Cost="3.00" Interval="1.00:00:00" AuditCode="NOV01IZ"/>
+					<BasicTariffPeriodFixed Cost="25.00" Interval="1.01:00:00" AuditCode="NOV01JA"/>
+					<BasicTariffPeriodFixed Cost="26.00" Interval="1.02:00:00" AuditCode="NOV01JB"/>
+					<BasicTariffPeriodFixed Cost="27.00" Interval="1.03:00:00" AuditCode="NOV01JC"/>
+					<BasicTariffPeriodFixed Cost="28.00" Interval="1.04:00:00" AuditCode="NOV01JD"/>
+					<BasicTariffPeriodFixed Cost="29.00" Interval="1.05:00:00" AuditCode="NOV01JE"/>
+					<BasicTariffPeriodFixed Cost="30.00" Interval="1.06:00:00" AuditCode="NOV01JF"/>
+					<BasicTariffPeriodFixed Cost="31.00" Interval="1.07:00:00" AuditCode="NOV01JG"/>
+					<BasicTariffPeriodFixed Cost="32.00" Interval="1.08:00:00" AuditCode="NOV01JH"/>
+					<BasicTariffPeriodFixed Cost="33.00" Interval="1.09:00:00" AuditCode="NOV01JI"/>
+					<BasicTariffPeriodFixed Cost="34.00" Interval="1.10:00:00" AuditCode="NOV01JJ"/>
+					<BasicTariffPeriodFixed Cost="35.00" Interval="1.11:00:00" AuditCode="NOV01JK"/>
+					<BasicTariffPeriodFixed Cost="36.00" Interval="1.12:00:00" AuditCode="NOV01JL"/>
+					<BasicTariffPeriodFixed Cost="37.00" Interval="1.13:00:00" AuditCode="NOV01JM"/>
+					<BasicTariffPeriodFixed Cost="38.00" Interval="1.14:00:00" AuditCode="NOV01JN"/>
+					<BasicTariffPeriodFixed Cost="39.00" Interval="1.15:00:00" AuditCode="NOV01JO"/>
+					<BasicTariffPeriodFixed Cost="40.00" Interval="1.16:00:00" AuditCode="NOV01JP"/>
+					<BasicTariffPeriodFixed Cost="41.00" Interval="1.17:00:00" AuditCode="NOV01JQ"/>
+					<BasicTariffPeriodFixed Cost="42.00" Interval="1.18:00:00" AuditCode="NOV01JR"/>
+					<BasicTariffPeriodFixed Cost="43.00" Interval="1.19:00:00" AuditCode="NOV01JS"/>
+					<BasicTariffPeriodFixed Cost="44.00" Interval="1.20:00:00" AuditCode="NOV01JT"/>
+					<BasicTariffPeriodFixed Cost="45.00" Interval="1.21:00:00" AuditCode="NOV01JU"/>
+					<BasicTariffPeriodFixed Cost="46.00" Interval="1.22:00:00" AuditCode="NOV01JV"/>
+					<BasicTariffPeriodFixed Cost="47.00" Interval="1.23:00:00" AuditCode="NOV01JW"/>
+					<BasicTariffPeriodFixed Cost="48.00" Interval="2.00:00:00" AuditCode="NOV01JX"/>
+					<BasicTariffPeriodFixed Cost="72.00" Interval="3.00:00:00" AuditCode="NOV01JY"/>
+					<BasicTariffPeriodFixed Cost="96.00" Interval="4.00:00:00" AuditCode="NOV01JZ"/>
+					<BasicTariffPeriodFixed Cost="120.00" Interval="5.00:00:00" AuditCode="NOV01KA"/>
+					<BasicTariffPeriodFixed Cost="144.00" Interval="6.00:00:00" AuditCode="NOV01KB"/>
+					<BasicTariffPeriodFixed Cost="168.00" Interval="7.00:00:00" AuditCode="NOV01KC"/>
+					<BasicTariffPeriodFixed Cost="192.00" Interval="8.00:00:00" AuditCode="NOV01KD"/>
+					<BasicTariffPeriodFixed Cost="216.00" Interval="9.00:00:00" AuditCode="NOV01KE"/>
+					<BasicTariffPeriodFixed Cost="240.00" Interval="10.00:00:00" AuditCode="NOV01KF"/>
+					<BasicTariffPeriodFixed Cost="264.00" Interval="11.00:00:00" AuditCode="NOV01KG"/>
+					<BasicTariffPeriodFixed Cost="288.00" Interval="12.00:00:00" AuditCode="NOV01KH"/>
+					<BasicTariffPeriodFixed Cost="312.00" Interval="13.00:00:00" AuditCode="NOV01KI"/>
+					<BasicTariffPeriodFixed Cost="336.00" Interval="14.00:00:00" AuditCode="NOV01KJ"/>
+					<BasicTariffPeriodFixed Cost="360.00" Interval="15.00:00:00" AuditCode="NOV01KK"/>
+					<BasicTariffPeriodFixed Cost="384.00" Interval="16.00:00:00" AuditCode="NOV01KL"/>
+					<BasicTariffPeriodFixed Cost="408.00" Interval="17.00:00:00" AuditCode="NOV01KM"/>
+					<BasicTariffPeriodFixed Cost="432.00" Interval="18.00:00:00" AuditCode="NOV01KN"/>
+					<BasicTariffPeriodFixed Cost="456.00" Interval="19.00:00:00" AuditCode="NOV01KO"/>
+					<BasicTariffPeriodFixed Cost="480.00" Interval="20.00:00:00" AuditCode="NOV01KP"/>
+					<BasicTariffPeriodFixed Cost="504.00" Interval="21.00:00:00" AuditCode="NOV01KQ"/>
+					<BasicTariffPeriodFixed Cost="528.00" Interval="22.00:00:00" AuditCode="NOV01KR"/>
+					<BasicTariffPeriodFixed Cost="552.00" Interval="23.00:00:00" AuditCode="NOV01KS"/>
+					<BasicTariffPeriodFixed Cost="576.00" Interval="24.00:00:00" AuditCode="NOV01KT"/>
+					<BasicTariffPeriodFixed Cost="600.00" Interval="25.00:00:00" AuditCode="NOV01KU"/>
+					<BasicTariffPeriodFixed Cost="624.00" Interval="26.00:00:00" AuditCode="NOV01KV"/>
+					<BasicTariffPeriodFixed Cost="648.00" Interval="27.00:00:00" AuditCode="NOV01KW"/>
+					<BasicTariffPeriodFixed Cost="672.00" Interval="28.00:00:00" AuditCode="NOV01KX"/>
+					<BasicTariffPeriodFixed Cost="696.00" Interval="29.00:00:00" AuditCode="NOV01KY"/>
+					<BasicTariffPeriodFixed Cost="720.00" Interval="30.00:00:00" AuditCode="NOV01KZ"/>
+				</TariffFixedPeriods>
+			</CapTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC1">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="02:00:00" AuditCode="NOV01IA"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="03:00:00" AuditCode="NOV01IB"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="04:00:00" AuditCode="NOV01IC"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="05:00:00" AuditCode="NOV01ID"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="06:00:00" AuditCode="NOV01IE"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="07:00:00" AuditCode="NOV01IF"/>
+							<BasicTariffPeriodFixed Cost="15.00" Interval="08:00:00" AuditCode="NOV01IG"/>
+							<BasicTariffPeriodFixed Cost="17.00" Interval="09:00:00" AuditCode="NOV01IH"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="09:00" EndTime="18:00"/>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="TC2">
+							<BasicTariffPeriodFixed Cost="0.00" Interval="02:00:00" AuditCode="NOV01IA"/>
+							<BasicTariffPeriodFixed Cost="1.00" Interval="03:00:00" AuditCode="NOV01IK"/>
+							<BasicTariffPeriodFixed Cost="2.00" Interval="04:00:00" AuditCode="NOV01IL"/>
+							<BasicTariffPeriodFixed Cost="3.00" Interval="05:00:00" AuditCode="NOV01IM"/>
+							<BasicTariffPeriodFixed Cost="4.00" Interval="06:00:00" AuditCode="NOV01IN"/>
+							<BasicTariffPeriodFixed Cost="5.00" Interval="07:00:00" AuditCode="NOV01IO"/>
+							<BasicTariffPeriodFixed Cost="6.00" Interval="08:00:00" AuditCode="NOV01IP"/>
+							<BasicTariffPeriodFixed Cost="7.00" Interval="09:00:00" AuditCode="NOV01IQ"/>
+							<BasicTariffPeriodFixed Cost="8.00" Interval="10:00:00" AuditCode="NOV01IR"/>
+							<BasicTariffPeriodFixed Cost="9.00" Interval="11:00:00" AuditCode="NOV01IS"/>
+							<BasicTariffPeriodFixed Cost="10.00" Interval="12:00:00" AuditCode="NOV01FIT"/>
+							<BasicTariffPeriodFixed Cost="11.00" Interval="13:00:00" AuditCode="NOV01FIU"/>
+							<BasicTariffPeriodFixed Cost="12.00" Interval="14:00:00" AuditCode="NOV01FIV"/>
+							<BasicTariffPeriodFixed Cost="13.00" Interval="15:00:00" AuditCode="NOV01FIW"/>
+						</TariffFixedPeriods>
+					</Tariff>
+					<Rule>
+						<TariffRuleStartEndTime StartTime="18:00" EndTime="09:00"/>
+					</Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

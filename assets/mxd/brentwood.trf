@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="N3679-01 - BRENTWOOD B.C. - MICRO WITH AI GATE - COPTFOLD ROAD CAR PARK" CreationTime="2024-03-21T15:00:37Z" ValidFrom="2024-03-11T00:00:00Z">
+	<TariffDefs>
+		<CompositeTariff Name="STANDARD" Category="0" ClosedAction="Carry" FreeAction="Carry">
+			<BaseTariff>
+				<TariffFixedPeriods Repeatable="true" RepeatStartIndex="1" AuditCode="">
+					<BasicTariffPeriodFixed Cost="0.00" Interval="00:30:00" AuditCode="CR01A"/>
+					<BasicTariffPeriodFixed Cost="1.00" Interval="01:00:00" AuditCode="CR01B"/>
+					<BasicTariffPeriodFixed Cost="2.00" Interval="02:00:00" AuditCode="CR01C"/>
+					<BasicTariffPeriodFixed Cost="3.00" Interval="03:00:00" AuditCode="CR01D"/>
+					<BasicTariffPeriodFixed Cost="4.00" Interval="04:00:00" AuditCode="CR01E"/>
+					<BasicTariffPeriodFixed Cost="5.00" Interval="05:00:00" AuditCode="CR01F"/>
+					<BasicTariffPeriodFixed Cost="6.00" Interval="1.00:00:00" AuditCode="CR01G"/>
+				</TariffFixedPeriods>
+			</BaseTariff>
+			<BaseDescriptions/>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="true">
+					<Tariff>
+						<FreeTariff AuditCode="TC0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="OR">
+							<TariffRuleReference RefName="Holidays"/>
+							<TariffRuleCombiner Operation="AND">
+								<TariffRuleActiveDay Day="Sunday"/>
+								<TariffRuleStartEndTime StartTime="06:00" EndTime="19:00"/>
+							</TariffRuleCombiner>
+						</TariffRuleCombiner>
+					</Rule>
+					<Descriptions/>
+				</TariffItem>
+			</Tariffs>
+			<Descriptions/>
+		</CompositeTariff>
+	</TariffDefs>
+	<RuleLibrary>
+		<TariffRuleLibraryEntry Name="Holidays">
+			<Rule>
+				<TariffRuleCombiner Operation="OR">
+					<TariffRuleActiveDate Date="2024-03-29"/>
+					<TariffRuleActiveDate Date="2024-04-01"/>
+					<TariffRuleActiveDate Date="2024-05-06"/>
+					<TariffRuleActiveDate Date="2024-05-27"/>
+					<TariffRuleActiveDate Date="2024-08-26"/>
+					<TariffRuleActiveDate Date="2024-12-25"/>
+					<TariffRuleActiveDate Date="2024-12-26"/>
+					<TariffRuleActiveDate Date="2025-01-01"/>
+					<TariffRuleActiveDate Date="2025-04-18"/>
+					<TariffRuleActiveDate Date="2025-04-21"/>
+					<TariffRuleActiveDate Date="2025-05-05"/>
+					<TariffRuleActiveDate Date="2025-05-26"/>
+					<TariffRuleActiveDate Date="2025-08-25"/>
+					<TariffRuleActiveDate Date="2025-12-25"/>
+					<TariffRuleActiveDate Date="2025-12-26"/>
+					<TariffRuleActiveDate Date="2026-01-01"/>
+					<TariffRuleActiveDate Date="2026-04-02"/>
+					<TariffRuleActiveDate Date="2026-04-06"/>
+					<TariffRuleActiveDate Date="2026-05-04"/>
+					<TariffRuleActiveDate Date="2026-05-25"/>
+					<TariffRuleActiveDate Date="2026-08-31"/>
+					<TariffRuleActiveDate Date="2026-12-25"/>
+					<TariffRuleActiveDate Date="2026-12-26"/>
+					<TariffRuleActiveDate Date="2026-12-28"/>
+					<TariffRuleActiveDate Date="2027-01-01"/>
+					<TariffRuleActiveDate Date="2027-03-26"/>
+					<TariffRuleActiveDate Date="2027-03-29"/>
+					<TariffRuleActiveDate Date="2027-05-03"/>
+					<TariffRuleActiveDate Date="2027-05-31"/>
+					<TariffRuleActiveDate Date="2027-08-30"/>
+					<TariffRuleActiveDate Date="2027-12-25"/>
+					<TariffRuleActiveDate Date="2027-12-26"/>
+					<TariffRuleActiveDate Date="2027-12-27"/>
+					<TariffRuleActiveDate Date="2027-12-28"/>
+					<TariffRuleActiveDate Date="2028-01-01"/>
+					<TariffRuleActiveDate Date="2028-01-03"/>
+					<TariffRuleActiveDate Date="2028-04-14"/>
+					<TariffRuleActiveDate Date="2028-04-17"/>
+					<TariffRuleActiveDate Date="2028-05-01"/>
+					<TariffRuleActiveDate Date="2028-05-29"/>
+					<TariffRuleActiveDate Date="2028-08-28"/>
+					<TariffRuleActiveDate Date="2028-12-25"/>
+					<TariffRuleActiveDate Date="2028-12-26"/>
+					<TariffRuleActiveDate Date="2029-01-01"/>
+					<TariffRuleActiveDate Date="2029-03-30"/>
+					<TariffRuleActiveDate Date="2029-04-02"/>
+					<TariffRuleActiveDate Date="2029-05-07"/>
+					<TariffRuleActiveDate Date="2029-05-28"/>
+					<TariffRuleActiveDate Date="2029-08-27"/>
+					<TariffRuleActiveDate Date="2029-12-25"/>
+					<TariffRuleActiveDate Date="2029-12-26"/>
+					<TariffRuleActiveDate Date="2030-01-01"/>
+					<TariffRuleActiveDate Date="2030-04-19"/>
+					<TariffRuleActiveDate Date="2030-04-22"/>
+					<TariffRuleActiveDate Date="2030-05-06"/>
+					<TariffRuleActiveDate Date="2030-05-27"/>
+					<TariffRuleActiveDate Date="2030-08-26"/>
+					<TariffRuleActiveDate Date="2030-12-25"/>
+					<TariffRuleActiveDate Date="2030-12-26"/>
+				</TariffRuleCombiner>
+			</Rule>
+		</TariffRuleLibraryEntry>
+	</RuleLibrary>
+</TariffSet>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TariffSet Description="PIE test tariff" ValidFrom="2022-06-01 08:00:00 +00:00">
+	<TariffDefs>
+		<CompositeTariff Name="W02" ClosedAction="Stop" FreeAction="Carry">
+			<!-- Basic tariff (when no other rules apply, e.g. overnight) is closed -->
+			<BaseTariff><ClosedTariff/></BaseTariff>
+			<Tariffs>
+				<TariffItem Priority="0" StopOnRule="false">
+					<Tariff>
+						<ClosedTariff AuditCode="PH0"/>
+					</Tariff>
+					<Rule>
+						<TariffRuleCombiner Operation="OR">
+							<TariffRuleActiveDate Date="2024-12-16"/>
+							<TariffRuleActiveDate Date="2024-12-17"/>
+							<TariffRuleActiveDate Date="2025-01-01"/>
+							<TariffRuleActiveDate Date="2025-03-30"/>
+							<TariffRuleActiveDate Date="2025-03-31"/>
+							<TariffRuleActiveDate Date="2025-04-01"/>
+							<TariffRuleActiveDate Date="2025-05-01"/>
+							<TariffRuleActiveDate Date="2025-06-06"/>
+							<TariffRuleActiveDate Date="2025-06-07"/>
+							<TariffRuleActiveDate Date="2025-06-08"/>
+							<TariffRuleActiveDate Date="2025-06-26"/>
+							<TariffRuleActiveDate Date="2025-07-05"/>
+							<TariffRuleActiveDate Date="2025-07-06"/>
+							<TariffRuleActiveDate Date="2025-09-04"/>
+							<TariffRuleActiveDate Date="2025-12-16"/>
+							<TariffRuleActiveDate Date="2025-12-17"/>
+						</TariffRuleCombiner>
+					</Rule>
+				</TariffItem>
+				<TariffItem Priority="1">
+					<!-- £1.00 per minutes, rounded up to the next mintes -->
+					<Tariff><BasicTariff Cost="0.100" Interval="00:30:00" RoundUp="True" AuditCode="STD"/></Tariff>
+					<Rule><TariffRuleAlways/></Rule>
+				</TariffItem>
+			</Tariffs>
+		</CompositeTariff>
+	</TariffDefs>
+</TariffSet>

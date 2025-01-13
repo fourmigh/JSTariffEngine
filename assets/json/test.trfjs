@@ -1,0 +1,12 @@
+{
+    "default": {
+		"rules" : [
+			{
+				"name": "flat_rate",
+				"type": "flat",
+				"rate": 100,
+				"unit": "minute"
+			}
+		]
+	}
+}

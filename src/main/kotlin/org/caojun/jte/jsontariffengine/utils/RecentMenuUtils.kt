@@ -35,12 +35,13 @@ object RecentMenuUtils {
         return list.toTypedArray()
     }
 
-    fun clear() {
+    fun clear(): Array<Pair<MenuItem, File>> {
         val listRecentFile = RecentFile.entries.toTypedArray()
         for (i in 0 until listRecentFile.size - 1) {
             val key = getKey(listRecentFile[i].name)
             PropertiesUtils.save(key)
         }
+        return load()
     }
 
     fun add(file: File): Array<Pair<MenuItem, File>> {
