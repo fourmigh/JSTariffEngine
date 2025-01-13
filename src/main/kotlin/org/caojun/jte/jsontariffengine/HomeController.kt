@@ -4,11 +4,13 @@ import javafx.application.Platform
 import javafx.fxml.FXML
 import javafx.scene.control.Menu
 import javafx.scene.control.MenuItem
+import javafx.scene.control.TextArea
 import javafx.stage.FileChooser
 import org.caojun.jte.jsontariffengine.utils.FileUtils
 import org.caojun.jte.jsontariffengine.utils.MenuUtils
 import org.caojun.jte.jsontariffengine.utils.RecentMenuUtils
 import org.caojun.library.jte.JsonTariffEngine
+import org.caojun.library.jte.utils.JsonUtils
 import org.slf4j.LoggerFactory
 import java.io.File
 
@@ -17,6 +19,8 @@ class HomeController {
 //    private val logger = LoggerFactory.getLogger(HomeController::class.java)
     private var jte: JsonTariffEngine? = null
 
+    @FXML
+    private lateinit var taFileContent: TextArea
     @FXML
     private lateinit var miOpenFile: MenuItem
     @FXML
@@ -62,13 +66,14 @@ class HomeController {
                 override fun onLog(log: String) {
                     println("[JsonTariffEngine] onLog: $log")
                 }
-
             })
             if (true == jte?.isEnabled()) {
                 val listRecentFile = RecentMenuUtils.add(file)
                 loadRecentFileMenu(listRecentFile)
+                taFileContent.text = JsonUtils.format(json)
             } else {
                 jte = null
+                taFileContent.text = null
             }
         } else {
             val listRecentFile = RecentMenuUtils.clear()

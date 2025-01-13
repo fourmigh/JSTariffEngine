@@ -1,8 +1,10 @@
 package org.caojun.library.jte.utils
 
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
+
 
 object JsonUtils {
     const val NULL = "NULL"
@@ -84,10 +86,12 @@ object JsonUtils {
     }
 
     fun format(json: String, all: Boolean = false): String {
-        if (all) {
-            return json.replace(",", ",\n")
-        }
-        return json.replace("},{", "},\n{")
+//        if (all) {
+//            return json.replace(",", ",\n")
+//        }
+//        return json.replace("},{", "},\n{")
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        return gson.toJson(gson.fromJson(json, Any::class.java))
     }
 
     fun isJson(json: String?): Boolean {
