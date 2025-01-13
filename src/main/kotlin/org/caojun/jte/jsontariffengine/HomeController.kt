@@ -2,21 +2,19 @@ package org.caojun.jte.jsontariffengine
 
 import javafx.application.Platform
 import javafx.fxml.FXML
-import javafx.scene.control.Menu
-import javafx.scene.control.MenuItem
-import javafx.scene.control.TextArea
+import javafx.scene.control.*
 import javafx.stage.FileChooser
 import org.caojun.jte.jsontariffengine.utils.FileUtils
 import org.caojun.jte.jsontariffengine.utils.MenuUtils
 import org.caojun.jte.jsontariffengine.utils.RecentMenuUtils
 import org.caojun.library.jte.JsonTariffEngine
 import org.caojun.library.jte.utils.JsonUtils
-import org.slf4j.LoggerFactory
 import java.io.File
+
 
 class HomeController {
 
-//    private val logger = LoggerFactory.getLogger(HomeController::class.java)
+    //    private val logger = LoggerFactory.getLogger(HomeController::class.java)
     private var jte: JsonTariffEngine? = null
 
     @FXML
@@ -27,6 +25,8 @@ class HomeController {
     private lateinit var miQuit: MenuItem
     @FXML
     private lateinit var mOpenRecent: Menu
+    @FXML
+    lateinit var lvTariff: ListView<String>
 
     @FXML
     fun initialize() {
@@ -71,6 +71,13 @@ class HomeController {
                 val listRecentFile = RecentMenuUtils.add(file)
                 loadRecentFileMenu(listRecentFile)
                 taFileContent.text = JsonUtils.format(json)
+
+                val tariffs = jte?.getAllRuleNames() ?: emptyArray()
+                lvTariff.items.clear()
+                lvTariff.items.addAll(tariffs)
+                lvTariff.selectionModel.selectedIndexProperty().addListener { observable, oldValue, newValue ->
+                    println("Selected Index Changed from $oldValue to $newValue")
+                }
             } else {
                 jte = null
                 taFileContent.text = null
