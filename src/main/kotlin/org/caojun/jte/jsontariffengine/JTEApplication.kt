@@ -8,8 +8,8 @@ import javafx.stage.Stage
 class JTEApplication : Application() {
     override fun start(stage: Stage) {
         val fxmlLoader = FXMLLoader(JTEApplication::class.java.getResource("jte-home.fxml"))
-        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-        stage.title = "HelloWorld!"
+        val scene = Scene(fxmlLoader.load(), 1200.0, 600.0)
+        stage.title = "JsonTariffEngine"
         stage.scene = scene
 //        stage.isFullScreen = true
         stage.show()

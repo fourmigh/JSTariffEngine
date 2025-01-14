@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="root"
+      fx:controller="org.caojun.jte.jsontariffengine.AddRuleTypeController"
+      alignment="CENTER_RIGHT"
+      spacing="10.0">
+
+    <Pane fx:id="paneCommonPart" />
+    <Button text="OK" fx:id="btnOK" />
+
+</VBox>

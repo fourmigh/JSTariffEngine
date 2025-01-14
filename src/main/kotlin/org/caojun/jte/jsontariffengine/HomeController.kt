@@ -90,6 +90,18 @@ class HomeController {
             })
         }
 
+        btnRuleAdd.setOnAction {
+            openController<AddRuleTypeController>("add-rule-type", btnRuleAdd.text, object : ControllerListener<AddRuleTypeController> {
+                override fun onInit(controller: AddRuleTypeController) {
+
+                }
+
+                override fun onReturn(controller: AddRuleTypeController) {
+                    val ruleTypeName = controller.getReturnData()
+                }
+            })
+        }
+
         val listRecentFile = RecentMenuUtils.load()
         loadRecentFileMenu(listRecentFile)
     }

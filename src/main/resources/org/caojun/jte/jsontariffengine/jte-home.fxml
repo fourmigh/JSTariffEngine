@@ -82,7 +82,7 @@
       <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
     </Menu>
   </MenuBar>
-  <SplitPane dividerPositions="0.20, 0.30, 0.60" focusTraversable="true" VBox.vgrow="ALWAYS">
+  <SplitPane dividerPositions="0.20, 0.40, 0.60" focusTraversable="true" VBox.vgrow="ALWAYS">
     <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
       <TextArea fx:id="taFileContent" wrapText="true" VBox.vgrow="ALWAYS"/>
     </ScrollPane>
