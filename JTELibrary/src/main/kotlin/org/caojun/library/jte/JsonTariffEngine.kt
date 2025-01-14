@@ -19,6 +19,10 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
         return listRuleSet?.keys?.toTypedArray() ?: emptyArray()
     }
 
+    fun getListRuleSet(): Map<String, RuleSet>? {
+        return listRuleSet
+    }
+
     fun isEnabled(): Boolean {
         val names = getAllRuleNames()
         if (names.isEmpty()) {
@@ -48,7 +52,7 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
         }
     }
 
-    private fun getRuleSet(key: String): RuleSet? {
+    fun getRuleSet(key: String): RuleSet? {
         return listRuleSet?.get(key)
     }
 

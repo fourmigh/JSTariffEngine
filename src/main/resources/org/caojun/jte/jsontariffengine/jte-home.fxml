@@ -82,7 +82,7 @@
       <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
     </Menu>
   </MenuBar>
-  <SplitPane dividerPositions="0.20, 0.35, 0.66" focusTraversable="true" VBox.vgrow="ALWAYS">
+  <SplitPane dividerPositions="0.20, 0.30, 0.60" focusTraversable="true" VBox.vgrow="ALWAYS">
     <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
       <TextArea fx:id="taFileContent" wrapText="true" VBox.vgrow="ALWAYS"/>
     </ScrollPane>
@@ -91,13 +91,26 @@
         <Label VBox.vgrow="ALWAYS" text="Tariff List"/>
         <ListView fx:id="lvTariff" VBox.vgrow="ALWAYS" />
         <HBox alignment="CENTER" spacing="5.0">
-          <Button text="Add Tariff" HBox.hgrow="ALWAYS" />
-          <Button text="Edit Tariff" HBox.hgrow="ALWAYS" />
+          <Button fx:id="btnTariffAdd" text="Add Tariff" HBox.hgrow="ALWAYS" />
+          <Button fx:id="btnTariffEdit" text="Edit Tariff" HBox.hgrow="ALWAYS" />
         </HBox>
       </VBox>
     </ScrollPane>
-    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS"/>
-    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS"/>
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" >
+      <VBox VBox.vgrow="ALWAYS">
+        <Label VBox.vgrow="ALWAYS" text="Rule List"/>
+        <ListView fx:id="lvRule" VBox.vgrow="ALWAYS" />
+        <HBox alignment="CENTER" spacing="5.0">
+          <Button fx:id="btnRuleAdd" text="Add Rule" HBox.hgrow="ALWAYS" />
+          <Button fx:id="btnRuleEdit" text="Edit Rule" HBox.hgrow="ALWAYS" />
+        </HBox>
+      </VBox>
+    </ScrollPane>
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" >
+      <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
+        <TextArea fx:id="taRule" wrapText="true" VBox.vgrow="ALWAYS"/>
+      </ScrollPane>
+    </ScrollPane>
   </SplitPane>
   <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
     <padding>
