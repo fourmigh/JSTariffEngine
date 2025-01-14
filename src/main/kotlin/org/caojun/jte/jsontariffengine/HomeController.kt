@@ -147,6 +147,7 @@ class HomeController {
         lvTariff.items.clear()
         lvRule.items.clear()
         val result = jte?.isEnabled() == true
+        println("[JsonTariffEngine] isEnabled: $result")
         if (result) {
             taFileContent.text = JsonUtils.format(json)
 

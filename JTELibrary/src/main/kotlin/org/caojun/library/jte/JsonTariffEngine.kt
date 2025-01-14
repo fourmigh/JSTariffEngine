@@ -31,9 +31,9 @@ class JsonTariffEngine(json: String, private val listener: Listener? = null) {
         return try {
             for (name in names) {
                 val ruleSet = getRuleSet(name) ?: return false
-                if (ruleSet.rules.isEmpty()) {
-                    return false
-                }
+//                if (ruleSet.rules.isEmpty()) {
+//                    return false
+//                }
             }
             true
         } catch (e: Exception) {
